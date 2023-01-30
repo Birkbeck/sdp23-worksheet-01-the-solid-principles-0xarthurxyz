@@ -2,18 +2,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
-    // attributes
+    // Attributes
     List<String> spots;
 
-    // constructor
+    // Constructor
     public Board() {
+        // Sets Board.spots to empty ArrayList
         this.spots = new ArrayList<>();
+        /* Populates Board.spots with 
+         * 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+         * 
+         * which is equivalent to:
+         * 
+         * 0 1 2
+         * 3 4 5
+         * 6 7 8
+         */
         for (int i = 0; i < 9; i++) {
             this.spots.add(String.valueOf(i));
         }
     }
 
-    // method
+    // Methods
     public List<String> firstRow() {
         List<String> firstRow = new ArrayList<>();
         firstRow.add(this.spots.get(0));
@@ -44,5 +54,10 @@ public class Board {
             + this.spots.get(3) + " | " + this.spots.get(4) + " | " + this.spots.get(5) + "\n"
             + this.spots.get(6) + " | " + this.spots.get(7) + " | " + this.spots.get(8);
         System.out.print(formattedFirstRow);
+    }
+
+    // Debugging
+    public static void main(String[] args) {
+
     }
 }
