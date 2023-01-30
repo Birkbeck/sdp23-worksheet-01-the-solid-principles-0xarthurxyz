@@ -9,10 +9,10 @@ public class Board {
     public Board() {
         // Sets Board.spots to empty ArrayList
         this.spots = new ArrayList<>();
-        /* Populates Board.spots with 
-         * 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+        /* Populates Board.spots ArrayList with the following Strings:
+         * [0, 1, 2, 3, 4, 5, 6, 7, 8]
          * 
-         * which is equivalent to:
+         * which is equivalent to the following board:
          * 
          * 0 1 2
          * 3 4 5
@@ -58,6 +58,7 @@ public class Board {
 
     // Debugging
     public static void main(String[] args) {
-
+        Board board = new Board();
+        System.out.println(board.spots);
     }
 }
