@@ -2,8 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
+    // attributes
     List<String> spots;
 
+    // constructor
     public Board() {
         this.spots = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
@@ -11,6 +13,7 @@ public class Board {
         }
     }
 
+    // method
     public List<String> firstRow() {
         List<String> firstRow = new ArrayList<>();
         firstRow.add(this.spots.get(0));
