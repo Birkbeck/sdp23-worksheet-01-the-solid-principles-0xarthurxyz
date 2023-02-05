@@ -1,4 +1,4 @@
 public interface Formality {
-    // Method defined in interface
+    // Method
     String greet();
 }
