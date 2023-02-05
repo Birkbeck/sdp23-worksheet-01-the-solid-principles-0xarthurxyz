@@ -19,7 +19,7 @@ class Casual implements Formality {
     }
 }
 
-class Intimate extends Greeter implements Formality  {
+class Intimate implements Formality  {
     @Override
     public String greet() {
         return "Hello darling!";
@@ -28,25 +28,25 @@ class Intimate extends Greeter implements Formality  {
 
 
 public class Greeter {
-    String formality;
+    // Attribute(s)
 
+    /* 
+     * Non-null by default (to avoid Null error in switch statement)
+     */
+    String formality = "";
+
+    // Method
     public String greet() {
-        /* 
-         * Before
-         */
-        if (this.formality == "formal") {
-            return "Good evening";
-        } else if (this.formality == "casual") {
-            return "Goodday?";
-        } else if (this.formality == "intimate") {
-            return "Hello darling!";
-        } else {
-            return "Hello.";
+        switch (this.formality) {
+            case "formal":
+                return new Formal().greet();
+            case "casual":
+                return new Casual().greet();
+            case "intimate":
+                return new Intimate().greet();
+            default:
+                return new Normal().greet();
         }
-
-        /* 
-         * After
-         */
     }
 
     public void setFormality(String formality) {
