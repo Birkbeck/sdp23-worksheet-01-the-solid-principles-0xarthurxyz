@@ -29,7 +29,6 @@ class Intimate implements Formality  {
 
 public class Greeter {
     // Attribute(s)
-
     /* 
      * Non-null by default (to avoid Null error in switch statement)
      */
