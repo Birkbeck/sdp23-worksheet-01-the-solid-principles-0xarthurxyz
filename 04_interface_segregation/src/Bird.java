@@ -1,5 +1,5 @@
-public interface Bird {
-    public void fly();
-
-    public void molt();
+public abstract class Bird {
+    // Attribute(s)
+    String currentLocation;
+    int numberOfFeathers;
 }
