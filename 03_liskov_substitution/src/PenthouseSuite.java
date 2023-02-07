@@ -1,4 +1,4 @@
-public final class PenthouseSuite extends Apartment {
+public final class PenthouseSuite extends ApartmentWithRooms {
     public PenthouseSuite() {
         this.numberOfBedrooms = 4;
     }
