@@ -12,3 +12,27 @@ For each example, consider the problem and then how the code contravenes the SOL
 ------
 
 Credits: Thanks to Mike Knepper (mikeknep) for the basis of these materials. 
+
+
+## Notes
+
+### 01_single_responsibility
+
+- [x] All tests pass
+
+### 02_open_closed
+
+- [x] All tests pass
+
+### 03_liskov_substitution
+
+- [x] All tests pass
+
+### 04_interface_segregation
+
+- [x] All tests pass
+
+### 05_dependency_inversion
+
+- [ ] All tests pass
+
