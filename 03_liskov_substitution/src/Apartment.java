@@ -1,4 +1,4 @@
-abstract sealed class Apartment  permits PenthouseSuite, Studio {
+abstract sealed class Apartment permits Studio, ApartmentWithRooms {
     int squareFootage;
     int numberOfBedrooms;
 
