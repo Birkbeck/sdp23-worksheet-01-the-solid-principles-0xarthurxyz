@@ -34,8 +34,7 @@ Credits: Thanks to Mike Knepper (mikeknep) for the basis of these materials.
 
 ### 05_dependency_inversion
 
-- [ ] All tests pass
-
+- [x] All tests pass
 
 Bad code:
 
@@ -80,63 +79,3 @@ public class WeatherTracker {
 
 Refactored code:
 
-```java
-public interface AlerterClient {
-    // Interface method(s)
-    public String generateWeatherAlert(String condition);
-}
-
-public class EmailAlerterImpl implements AlerterClient {
-    @Override
-    public String generateWeatherAlert(String condition) {
-        String alert = "It is " + condition;
-        return alert;
-    }
-}
-
-public class PhoneAlerterImpl implements AlerterClient {
-    @Override
-    public String generateWeatherAlert(String condition) {
-        String alert = "It is " + condition;
-        return alert;
-    }
-}
-
-public abstract class Tracker {
-    // Attribute(s)
-    String currentConditions;
-}
-
-public interface TrackerClient {
-    // Interface method(s)
-    public void setCurrentConditions(String condition);
-}
-
-public class WeatherTracker extends Tracker implements TrackerClient {
-    // Custom attributes
-    PhoneAlerterImpl phoneAlerter;
-    EmailAlerterImpl emailAlerter;
-
-    // Constructor
-    WeatherTracker() {
-        phoneAlerter = new PhoneAlerterImpl();
-        emailAlerter = new EmailAlerterImpl();
-    }
-
-    @Override
-    public void setCurrentConditions(String condition) {
-        // Inherited attribute
-        this.currentConditions = condition;
-
-        // Custom logic
-        if (condition == "rainy") {
-            String alert = phoneAlerter.generateWeatherAlert(condition);
-            System.out.print(alert);
-        }
-        if (condition == "sunny") {
-            String alert = emailAlerter.generateWeatherAlert(condition);
-            System.out.print(alert);
-        }
-    }
-}
-```
