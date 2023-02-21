@@ -1,6 +1,6 @@
 # Worksheet One — SOLID design principles
 
-This worksheet contains examples of the five SOLID design principles of object-oriented programming. 
+This worksheet contains examples of the five SOLID design principles of object-oriented programming.
 For each example, consider the problem and then how the code contravenes the SOLID principles:
 
 - Single Responsibility Principle,
@@ -12,7 +12,6 @@ For each example, consider the problem and then how the code contravenes the SOL
 ------
 
 Credits: Thanks to Mike Knepper (mikeknep) for the basis of these materials. 
-
 
 ## Notes
 
@@ -78,4 +77,3 @@ public class WeatherTracker {
 ```
 
 Refactored code:
-
