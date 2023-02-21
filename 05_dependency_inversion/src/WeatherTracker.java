@@ -1,12 +1,12 @@
 public class WeatherTracker extends Tracker implements TrackerClient {
     // Custom attributes
-    PhoneAlerterImpl phoneAlerter;
-    EmailAlerterImpl emailAlerter;
+    Phone phone;
+    Emailer email;
 
     // Constructor
     WeatherTracker() {
-        phoneAlerter = new PhoneAlerterImpl();
-        emailAlerter = new EmailAlerterImpl();
+        phone = new Phone();
+        email = new Emailer();
     }
 
     @Override
@@ -16,11 +16,11 @@ public class WeatherTracker extends Tracker implements TrackerClient {
 
         // Custom logic
         if (condition == "rainy") {
-            String alert = phoneAlerter.generateWeatherAlert(condition);
+            String alert = phone.generateWeatherAlert(condition);
             System.out.print(alert);
         }
         if (condition == "sunny") {
-            String alert = emailAlerter.generateWeatherAlert(condition);
+            String alert = email.generateWeatherAlert(condition);
             System.out.print(alert);
         }
     }
