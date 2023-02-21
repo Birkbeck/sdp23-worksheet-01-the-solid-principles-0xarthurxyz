@@ -113,13 +113,13 @@ public interface TrackerClient {
 }
 
 public class WeatherTracker extends Tracker implements TrackerClient {
-    // Custome attributes
+    // Custom attributes
     PhoneAlerterImpl phoneAlerter;
     EmailAlerterImpl emailAlerter;
 
     // Constructor
     WeatherTracker() {
-        phoneAlerter = new phoneAlerter();
+        phoneAlerter = new PhoneAlerterImpl();
         emailAlerter = new EmailAlerterImpl();
     }
 
